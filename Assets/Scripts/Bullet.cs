@@ -5,11 +5,16 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public float speedBullet;
+    public float Speed;
 
-   
+    void Start()
+    {
+        Destroy(gameObject, 2f);
+    }
+
     void Update()
     {
-        transform.Translate(Vector3.right * speedBullet * Time.deltaTime);
+        //Movimentar a bola para direita
+        transform.Translate(Vector3.right * Speed * Time.deltaTime);
     }
 }
